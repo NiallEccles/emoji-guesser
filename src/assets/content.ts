@@ -3,6 +3,7 @@ export const content = {
     1: {
       name: 'Dublin',
       description: 'Overall',
+      theme: 'blue',
       content: [
         {
           name: 'Bull Island',
@@ -17,6 +18,7 @@ export const content = {
     1: {
       name: 'London',
       description: 'Overall',
+      theme: 'green',
       content: [
         {
           name: 'Waterloo',
