@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ContentService } from 'src/app/services/content/content.service';
-import { content } from '../../../assets/content';
 
 @Component({
   selector: 'app-type',
@@ -12,21 +11,24 @@ export class TypeComponent implements OnInit {
 
   private setName;
   private typeId;
+  public content;
 
-  constructor(private route: ActivatedRoute, private content: ContentService) {
+  constructor(private route: ActivatedRoute, private contentService: ContentService) {
     this.route.params.subscribe((param) => {
-      console.log(param);
+      // console.log(param);
       this.setName = param.set;
       this.typeId = param.item;
     });
+    this.getContent();
   }
 
   ngOnInit(): void {
-    console.log(content);
+    // console.log(content);
   }
 
   public getContent(): void {
-    this.content.getContent(this.setName, this.typeId);
+    this.content = this.contentService.getContent(this.setName, this.typeId);
+    console.log(this.content);
   }
 
 }
