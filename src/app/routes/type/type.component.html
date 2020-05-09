@@ -1,3 +1,4 @@
-<p>type works!</p>
-
-<div *ngIf="content | json">{{ content | json }}</div>
+<!-- <div *ngIf="content | json">{{ content | json }}</div> -->
+<ng-container *ngFor="let item of content.content">
+    <slate [data]=item></slate>
+</ng-container>

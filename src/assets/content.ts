@@ -4,13 +4,14 @@ export const content = {
       name: 'Dublin',
       description: 'Overall',
       theme: 'blue',
+      difficulty: 'normal',
       content: [
         {
           name: 'Bull Island',
           hints: ['ox', 'desert island'],
           acc: ['bill island'],
         },
-        {},
+        { name: 'Lucan', hints: ['toilet', 'canned food'] },
       ],
     },
   },
@@ -19,6 +20,7 @@ export const content = {
       name: 'London',
       description: 'Overall',
       theme: 'green',
+      difficulty: 'normal',
       content: [
         {
           name: 'Waterloo',

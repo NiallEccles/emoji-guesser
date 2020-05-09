@@ -6,17 +6,24 @@ import { AppComponent } from './app.component';
 import { GameComponent } from './routes/game/game.component';
 import { SetComponent } from './routes/set/set.component';
 import { TypeComponent } from './routes/type/type.component';
+import { UiModule } from './ui/ui.module';
+import { SlateComponent } from './components/slate/slate.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     GameComponent,
     SetComponent,
-    TypeComponent
+    TypeComponent,
+    SlateComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    UiModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

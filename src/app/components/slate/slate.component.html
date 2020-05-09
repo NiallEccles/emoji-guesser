@@ -1,0 +1,11 @@
+<div class="slate" [ngClass]="{correct: isValid}">
+  <div class="slate-image"></div>
+  <div class="slate-text">
+    <p>{{ data.name }}</p>
+  </div>
+  <div class="slate-input">
+    <form [formGroup]="guessFormGroup">
+        <input formControlName="guess" placeholder="">
+    </form>
+  </div>
+</div>
