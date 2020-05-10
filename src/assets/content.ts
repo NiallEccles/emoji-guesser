@@ -8,10 +8,21 @@ export const content = {
       content: [
         {
           name: 'Bull Island',
-          hints: ['ox', 'desert island'],
+          hints: [[0x1f402], [0x1f3dd, 0xfe0f]],
           acc: ['bill island'],
         },
-        { name: 'Lucan', hints: ['toilet', 'canned food'] },
+        {
+          name: 'Lucan',
+          hints: [[0x1f6bd], [0x1f96b]],
+        },
+        {
+          name: 'Islandbridge',
+          hints: [[0x1f3dd, 0xfe0f],[0x1F309]],
+        },
+        {
+          name: 'Dolphins Barn',
+          hints: [[0x1F42C],[0x1F3E0],[0x1F404],[0x1F40E], [0x1F416], [0x1F411], [0x1F413]],
+        },
       ],
     },
   },
@@ -24,7 +35,7 @@ export const content = {
       content: [
         {
           name: 'Waterloo',
-          hints: ['sweat droplets', 'toilet'],
+          hints: [[0x1f4a6], [0x1f6bd]],
           acc: ['water loo'],
         },
       ],
