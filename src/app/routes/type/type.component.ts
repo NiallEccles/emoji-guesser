@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ContentService } from 'src/app/services/content/content.service';
+import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
 
 @Component({
   selector: 'app-type',
   templateUrl: './type.component.html',
   styleUrls: ['./type.component.scss'],
+  animations: [
+    fadeInOnEnterAnimation(),
+    fadeOutOnLeaveAnimation()]
 })
 export class TypeComponent implements OnInit {
   private setName;
@@ -33,5 +37,8 @@ export class TypeComponent implements OnInit {
   }
   public addMessage(): void {
 
+  }
+  public getClass(theme) {
+    return theme;
   }
 }
