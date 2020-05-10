@@ -1,11 +1,13 @@
-<div class="slate" [ngClass]="{correct: isValid}">
+<div class="slate" [ngClass]="{ correct: isValid }">
   <div class="slate-image"></div>
-  <div class="slate-text">
-    <p>{{ data.name }}</p>
+  <div class="slate-text" [ngClass]="{wrap: data['hints'].length > 4}">
+    <div class="slate-text-container" *ngFor="let hint of data['hints']" [ngClass]="{mb: data['hints'].length > 4}">
+      <h2>{{ hint | emoji }}</h2>
+    </div>
   </div>
   <div class="slate-input">
     <form [formGroup]="guessFormGroup">
-        <input formControlName="guess" placeholder="">
+      <input formControlName="guess" placeholder="" />
     </form>
   </div>
 </div>

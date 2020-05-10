@@ -1,7 +1,55 @@
-.slate{
-    background: grey;
+.slate {
+  //   margin: 1em 0;
+  width: 100vw;
+  padding: 1em 0;
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.1);
+  .slate-text {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    // margin: 1em 0;
+    padding: 0.5em 0;
+    background: rgba(0, 0, 0, 0);
+    &.wrap {
+      flex-direction: column;
+      flex-flow: wrap;
+    }
+    .slate-text-container {
+      width: 5em;
+      height: 5em;
+      text-align: center;
+    }
+    .slate-text-container.mb {
+      margin-bottom: 0.7em;
+    }
+    h2 {
+      font-size: 3em;
+      background: white;
+      padding: 0.2em;
+      border-radius: 5px;
+      margin: 0;
+    }
+  }
+  .slate-input {
+    form {
+      width: 100%;
+      text-align: center;
+    }
+    input {
+      width: 85%;
+      border: none;
+      border-radius: 5px;
+      padding: 1em;
+      background: rgba(0, 0, 0, 0.2);
+      text-align: center;
+      margin-top: 2em;
+    }
+  }
 }
 
-.correct{
-    background: green;
+.correct {
+  background: green;
 }
