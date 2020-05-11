@@ -1,4 +1,5 @@
 <!-- <div *ngIf="content | json">{{ content | json }}</div> -->
 <div class="type" [ngClass]="getClass(content.theme)">
+  <app-progress></app-progress>
   <slate *ngFor="let item of content.content; let i = index;" [data]="item" [@fadeInOnEnter]="{ value: '', params: { delay: i * 300 } }"></slate>
 </div>
