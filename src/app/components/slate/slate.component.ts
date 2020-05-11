@@ -27,6 +27,7 @@ export class SlateComponent implements OnInit {
           this.isValid = true;
           s.unsubscribe();
           this.guessFormGroup.controls['guess'].setValue(this.data['name']);
+          this.guessFormGroup.controls['guess'].disable();
         }
       }
     );
