@@ -12,6 +12,7 @@ import { SlateComponent } from './components/slate/slate.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EmojiPipe } from './pipes/emoji.pipe';
 import { ProgressComponent } from './components/progress/progress.component';
+import { BottombarComponent } from './components/bottombar/bottombar.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ProgressComponent } from './components/progress/progress.component';
     TypeComponent,
     SlateComponent,
     EmojiPipe,
-    ProgressComponent
+    ProgressComponent,
+    BottombarComponent
   ],
   imports: [
     BrowserModule,
