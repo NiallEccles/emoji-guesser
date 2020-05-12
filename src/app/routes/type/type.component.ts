@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ContentService } from 'src/app/services/content/content.service';
 import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
 import { ProgressService } from 'src/app/services/progress/progress.service';
+import { ThemeService } from 'src/app/services/theme/theme.service';
 
 @Component({
   selector: 'app-type',
@@ -20,13 +21,15 @@ export class TypeComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private contentService: ContentService,
-    private progressService: ProgressService
+    private progressService: ProgressService,
+    private themeService: ThemeService
   ) {
     this.route.params.subscribe((param) => {
       this.setName = param.set;
       this.typeId = param.item;
     });
     this.getContent();
+    this.themeService.theme.next(this.content.theme);
   }
 
   ngOnInit(): void {
