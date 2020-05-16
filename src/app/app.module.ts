@@ -13,6 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { EmojiPipe } from './pipes/emoji.pipe';
 import { ProgressComponent } from './components/progress/progress.component';
 import { BottombarComponent } from './components/bottombar/bottombar.component';
+import { ThemeDirective } from './directives/theme/theme.directive';
+import { NavComponent } from './components/nav/nav.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { BottombarComponent } from './components/bottombar/bottombar.component';
     SlateComponent,
     EmojiPipe,
     ProgressComponent,
-    BottombarComponent
+    BottombarComponent,
+    ThemeDirective,
+    NavComponent
   ],
   imports: [
     BrowserModule,
