@@ -9,11 +9,7 @@ import { ThemeService } from 'src/app/services/theme/theme.service';
 export class BottombarComponent implements OnInit {
   public theme: string;
 
-  constructor(private themeService: ThemeService) {
-    this.themeService.theme.subscribe((data) => {
-      this.theme = data;
-    });
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 }
