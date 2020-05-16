@@ -15,6 +15,7 @@ import { ProgressComponent } from './components/progress/progress.component';
 import { BottombarComponent } from './components/bottombar/bottombar.component';
 import { ThemeDirective } from './directives/theme/theme.directive';
 import { NavComponent } from './components/nav/nav.component';
+import { MessageComponent } from './components/message/message.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { NavComponent } from './components/nav/nav.component';
     ProgressComponent,
     BottombarComponent,
     ThemeDirective,
-    NavComponent
+    NavComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
