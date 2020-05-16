@@ -1,0 +1,26 @@
+nav {
+  position: sticky;
+  top: 0;
+  width: calc(100vw - 1em);
+  height: 3em;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5em;
+  &.blue {
+    background: #45c3fe;
+  }
+  .leading {
+    width: 1.5em;
+    color: white;
+  }
+  .trailing {
+    min-width: 2em;
+  }
+  .main {
+    color: white;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    text-align: center;
+  }
+}
