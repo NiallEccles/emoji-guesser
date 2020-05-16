@@ -1,6 +1,7 @@
 <!-- <div *ngIf="content | json">{{ content | json }}</div> -->
+<app-message></app-message>
 <app-nav>
-  <img leading src="assets/icons/arrow.svg" alt="">
+  <img (click)="show()" leading src="assets/icons/arrow.svg" alt="">
   <h1 main>{{content.name}}</h1>
   <p trailing>&nbsp;</p>
 </app-nav>

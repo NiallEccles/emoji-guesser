@@ -4,6 +4,7 @@ import { ContentService } from 'src/app/services/content/content.service';
 import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
 import { ProgressService } from 'src/app/services/progress/progress.service';
 import { ThemeService } from 'src/app/services/theme/theme.service';
+import { MessageService } from 'src/app/services/message/message.service';
 
 @Component({
   selector: 'app-type',
@@ -22,7 +23,8 @@ export class TypeComponent implements OnInit {
     private route: ActivatedRoute,
     private contentService: ContentService,
     private progressService: ProgressService,
-    private themeService: ThemeService
+    private themeService: ThemeService,
+    private messageService: MessageService
   ) {
     this.route.params.subscribe((param) => {
       this.setName = param.set;
@@ -43,5 +45,9 @@ export class TypeComponent implements OnInit {
   }
   public addMessage(): void {
 
+  }
+
+  public show(){
+    this.messageService.show.next(true);
   }
 }
