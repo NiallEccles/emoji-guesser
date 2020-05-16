@@ -1,0 +1,35 @@
+.message {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 4;
+  position: fixed;
+  .message-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 15em;
+    height: 15em;
+    border-radius: 10px;
+    .message-title {
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+    }
+    .message-button{
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+    }
+    .message-button > button {
+      border-radius: 5px;
+      padding: 0.8em 0;
+      width: 7em;
+      border: none;
+      color: white;
+    }
+    .message-button > button.blue {
+      background: #45c3fe;
+    }
+  }
+}

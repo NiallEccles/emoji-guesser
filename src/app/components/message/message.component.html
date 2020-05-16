@@ -1,0 +1,13 @@
+<div *ngIf="show" class="message">
+  <div class="message-inner">
+    <div class="message-image">
+      {{ emojiIcon | emoji }}
+    </div>
+    <div class="message-title">
+      <h3>{{ title }}</h3>
+    </div>
+    <div class="message-button">
+      <button (click)="close()" theme>Okay!</button>
+    </div>
+  </div>
+</div>
