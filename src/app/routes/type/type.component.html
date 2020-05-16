@@ -1,5 +1,10 @@
 <!-- <div *ngIf="content | json">{{ content | json }}</div> -->
-<div class="type" [ngClass]="getClass(content.theme)">
+<app-nav>
+  <img leading src="assets/icons/arrow.svg" alt="">
+  <h1 main>{{content.name}}</h1>
+  <p trailing>&nbsp;</p>
+</app-nav>
+<div class="type" theme>
   <slate
     *ngFor="let item of content.content; let i = index"
     [data]="item"

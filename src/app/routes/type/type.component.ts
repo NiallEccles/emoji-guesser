@@ -44,7 +44,4 @@ export class TypeComponent implements OnInit {
   public addMessage(): void {
 
   }
-  public getClass(theme) {
-    return theme;
-  }
 }
