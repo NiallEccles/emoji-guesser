@@ -6,6 +6,10 @@ import { TypeComponent } from './routes/type/type.component';
 
 const routes: Routes = [
   {
+    path: '',
+    component: GameComponent,
+  },
+  {
     path: 'game',
     component: GameComponent,
   },
