@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from './services/theme/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'emoji-guesser';
+  class = 'default';
+
+  constructor(private themeService: ThemeService){
+    this.themeService.theme.subscribe(data=>{
+      this.class = data;
+    });
+  }
 }
