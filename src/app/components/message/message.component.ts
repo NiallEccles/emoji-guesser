@@ -21,8 +21,4 @@ export class MessageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public close() {
-    this.messageService.show.next(false);
-  }
-
 }
