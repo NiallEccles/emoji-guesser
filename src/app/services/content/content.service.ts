@@ -25,4 +25,8 @@ export class ContentService {
       return { error: 'Content not found' };
     }
   }
+
+  getAll() {
+    return this._content;
+  }
 }
