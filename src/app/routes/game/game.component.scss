@@ -1,0 +1,64 @@
+.game{
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    background: yellow;
+    .upper{
+        padding: 0 1em;
+    }
+    .lower{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        .set-details{
+            border-radius: 10px;
+            width: 10em;
+            height: 10em;
+            margin: 0 0.5em;
+            display: inline-block;
+            position: relative;
+        }
+        .set-details>h2{
+            margin: 0;
+            padding: 0;
+        }
+        .set-details>.set-image>img{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 10px 10px 0 0;
+        }
+        .set-details>.set-name{
+            background: white;
+            position: absolute;
+            z-index: 4;
+            bottom: 0;
+            width: calc(100% - 0.6em);
+            border-radius: 0 0 10px 10px;
+            padding: 0 0.3em;
+        }
+        .set-details>.set-name>h2{
+            margin: 0;
+            padding: 0;
+        }
+        .set-details>.set-link{
+            position: absolute;
+            right: 0.7em;
+            bottom: 0.3em;
+            z-index: 4;
+        }
+        .set-details>.set-link>img{
+            width: 1em;
+            transform: rotate(180deg);
+        }
+        .wrapper{
+            display: inline-flex;
+            flex-direction: row;
+            overflow-x: scroll;
+        }
+        .set-item{
+            border-radius: 10px;
+            background: green;
+        }
+    }
+}

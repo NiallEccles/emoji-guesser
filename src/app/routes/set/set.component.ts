@@ -17,14 +17,11 @@ export class SetComponent implements OnInit {
   constructor(private route: ActivatedRoute, public contentService: ContentService) {
     this.route.params.subscribe((param) => {
       this.name = param.set;
-      console.log(param);
       this.content = this.contentService.getContent(param.set);
       // this.emoji = this.content.
     });
     // console.log(this.content);
     this.rcontent = Object.values(this.content);
-    console.log(this.rcontent);
-    
     this.length = Object.keys(this.content).length;
   }
 
@@ -32,5 +29,9 @@ export class SetComponent implements OnInit {
 
   mySortingFunction = (a, b) => {
     return a.key > b.key ? 1 : -1;
+  }
+
+  getLink(i: number){
+    return [`/game/${this.name}/${Object.keys(this.content)[i]}`];
   }
 }

@@ -1,1 +1,19 @@
-<a [routerLink]="['/game/Dublin/']" routerLinkActive="router-link-active" >Dublin</a>
+<div class="game">
+    <div class="upper">
+        <h1>Emoji Guesser</h1>
+    </div>
+    <div class="lower">
+        <div class="set-details" *ngFor="let set of getKeys(content); let i = index;" [routerLink]="getLink(set)" routerLinkActive="router-link-active">
+            <div class="set-image"><img src="../../../assets/backgrounds/Ngaruroro.png" alt=""></div>
+            <div class="set-name"><h2>{{set}}</h2></div>
+            <div class="set-link"><img src="../../../assets/icons/arrow-r.svg" alt=""></div>
+            <!-- <div class="wrapper">
+                <div class="set-item" *ngFor="let setItem of getValues(content[set])">
+                    {{setItem | json}}
+                    <h3>{{setItem.name}}</h3>
+                    <hr>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
