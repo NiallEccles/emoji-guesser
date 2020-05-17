@@ -18,7 +18,8 @@ export class ContentService {
       if (this._content[setName][typeId]) {
         return this._content[setName][typeId];
       } else {
-        return { error: 'Content not found' };
+        return this._content[setName];
+        // return { error: 'Content not found' };
       }
     } else {
       return { error: 'Content not found' };

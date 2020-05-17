@@ -1,0 +1,88 @@
+.return{
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    z-index: 4;
+    width: 1.3em;
+}
+.set {
+  height: 100vh;
+  position: sticky;
+  font-family: "Poppins", sans-serif;
+  .set-upper {
+    background: url("../../../assets/backgrounds/Ngaruroro.png");
+    height: 100%;
+    background-size: 120%;
+    color: white;
+    padding: 0 1em;
+    &::after {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .set-upper-content {
+      padding-top: 6em;
+    }
+    .set-upper-content > h1,
+    .set-upper-content > h2 {
+      margin: 0;
+      position: relative;
+      z-index: 4;
+    }
+    .set-upper-content > h2 {
+      font-size: 1em;
+    }
+  }
+  .set-lower {
+    position: absolute;
+    top: 12em;
+    background: white;
+    width: 100%;
+    min-height: calc(100vh - 13em);
+    border-radius: 1em 1em 0 0;
+    padding-top: 1em;
+    .set-lower-content {
+      padding: 0 1em;
+      display: flex;
+      align-items: center;
+      margin-bottom: 1em;
+    }
+    .set-lower-content > .emoji {
+      font-size: 3em;
+    }
+    .details {
+      margin-left: 1em;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .set-lower-content > .details > h3,
+    .set-lower-content > .details > h4 {
+      margin: 0;
+    }
+    .set-lower-content > .details > .description {
+      color: rgba(0, 0, 0, 0.3);
+      font-size: 1em;
+    }
+    .set-lower-content > .details > h4 > span.easy {
+      color: #004643;
+    }
+    .set-lower-content > .details > h4 > span.normal {
+      color: #abd1c6;
+    }
+    .set-lower-content > .details > h4 > span.hard {
+      color: #e53170;
+    }
+    .set-lower-content > .trailing{
+        width: 1.3em;
+    }
+    .set-lower-content > .trailing > img{
+        transform: rotate(180deg);
+    }
+  }
+}

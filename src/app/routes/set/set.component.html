@@ -1,1 +1,33 @@
-<a [routerLink]="['/game/Dublin/1']" routerLinkActive="router-link-active" >Set 1</a>
+<div class="return" [routerLink]="['/game/']" routerLinkActive="router-link-active">
+    <img src="../../../assets/icons/arrow-l.svg" alt="">
+</div>
+<div class="set" *ngIf="content">
+  <div class="set-upper">
+    <div class="set-upper-content">
+      <h1>{{ name }}</h1>
+      <h2>Number of types: {{ length }}</h2>
+    </div>
+  </div>
+  <div
+    class="set-lower"
+    *ngFor="let item of rcontent"
+    [routerLink]="['/game/Dublin/1']"
+    routerLinkActive="router-link-active"
+  >
+  <ng-container *ngFor="let content of rcontent">
+    <div class="set-lower-content">
+        <div class="emoji">
+            {{ content.emoji | emoji }}
+        </div>
+        <div class="details">
+          <h3>{{ content.name }}</h3>
+          <h3 class="description">{{ content.description }}</h3>
+          <h4>Difficulty: <span [ngClass]="content.difficulty">{{ content.difficulty | titlecase }}</span></h4>
+        </div>
+        <div class="trailing">
+            <img src="../../../assets/icons/arrow-r.svg" alt="">
+        </div>
+      </div>
+  </ng-container>
+  </div>
+</div>
