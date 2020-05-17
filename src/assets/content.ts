@@ -5,6 +5,7 @@ export const content = {
       description: 'Overall',
       theme: 'blue',
       difficulty: 'normal',
+      emoji: [0x1F3DD],
       content: [
         {
           name: 'Bull Island',
