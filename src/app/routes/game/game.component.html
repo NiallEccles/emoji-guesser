@@ -1,6 +1,7 @@
 <div class="game">
     <div class="upper">
         <h1>Emoji Guesser</h1>
+        <h2>Sets <small>{{getKeys(content).length}}</small></h2>
     </div>
     <div class="lower">
         <div class="set-details" *ngFor="let set of getKeys(content); let i = index;" [routerLink]="getLink(set)" routerLinkActive="router-link-active">

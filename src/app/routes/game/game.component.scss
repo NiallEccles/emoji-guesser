@@ -1,9 +1,26 @@
 .game{
     font-family: "Poppins", sans-serif;
-    overflow: hidden;
-    background: yellow;
+    overflow-x: hidden;
+    height: 100vh;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0; 
+        left: 0;
+        width: 100%; 
+        height: 100%;  
+        opacity: 1; 
+        z-index: -1;
+        background: #FABA00 url('../../../assets/backgrounds/Doubs.png');
+        transform: rotate(180deg);
+        background-position: center center;
+    }
     .upper{
         padding: 0 1em;
+        h1, h2{
+            color: white;
+        }
     }
     .lower{
         overflow-x: scroll;
@@ -32,7 +49,7 @@
             background: white;
             position: absolute;
             z-index: 4;
-            bottom: 0;
+            bottom: 4px;
             width: calc(100% - 0.6em);
             border-radius: 0 0 10px 10px;
             padding: 0 0.3em;
